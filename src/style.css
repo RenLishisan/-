@@ -1,0 +1,524 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.bg {
+  /* 背景 */
+  background: rgb(253, 219, 33);
+  height: 100vh;
+  z-index: 1;
+}
+
+/* ------泡泡开始------ */
+
+.pop {
+  width: 30px;
+  height: 30px;
+  background: rgb(174, 172, 12);
+  border-radius: 50%;
+  position: absolute;
+}
+.pop.a {
+  width: 70px;
+  height: 70px;
+  left: 50%;
+  top: 120px;
+  transform: translateX(-230px);
+}
+.pop.b {
+  width: 45px;
+  height: 45px;
+  left: 50%;
+  top: 200px;
+  transform: translateX(-200px);
+}
+.pop.c {
+  width: 30px;
+  height: 30px;
+  left: 50%;
+  top: 330px;
+  transform: translateX(-201px);
+}
+.pop.d {
+  width: 70px;
+  height: 70px;
+  left: 50%;
+  top: 380px;
+  transform: translateX(-195px);
+}
+.pop.e {
+  width: 30px;
+  height: 30px;
+  left: 50%;
+  top: 400px;
+  transform: translateX(140px);
+}
+.pop.f {
+  width: 30px;
+  height: 30px;
+  left: 50%;
+  top: 120px;
+  transform: translateX(150px);
+}
+.pop.g {
+  width: 50px;
+  height: 50px;
+  left: 50%;
+  top: 340px;
+  transform: translateX(115px);
+}
+/* ------泡泡结束------ */
+.eye {
+  /* 眼睛 */
+  border: 3px solid black;
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
+  position: absolute;
+  top: 115px;
+  background: rgb(255, 255, 255);
+}
+.eye.left {
+  right: 50%;
+}
+.eye.right {
+  left: 50%;
+}
+/* ------------ */
+.eye2 {
+  /* 眼中睛 */
+  border: 3px solid black;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  position: absolute;
+  top: 45px;
+  background: rgb(0, 153, 255);
+}
+.eye2::before {
+  /* 眼中中睛 */
+  content: "";
+  left: 11px;
+  top: 25%;
+  width: 20px;
+  height: 20px;
+  display: block;
+  border-radius: 50%;
+  position: relative;
+  background: #000;
+}
+.eye2.left2 {
+  right: 30%;
+}
+.eye2.right2 {
+  left: 30%;
+}
+/* ------眉毛开始------ */
+.brow {
+  width: 15px;
+  height: 40px;
+  position: absolute;
+  background: #000;
+}
+.brow.a {
+  top: 102px;
+  right: 50%;
+  transform: translateX(-132px) rotate(-43deg);
+}
+.brow.b {
+  top: 77px;
+  right: 50%;
+  transform: translateX(-71px);
+}
+.brow.c {
+  top: 93px;
+  right: 50%;
+  transform: translateX(-14px) rotate(34deg);
+}
+.brow.d {
+  top: 93px;
+  right: 50%;
+  transform: translateX(31px) rotate(-38deg);
+}
+.brow.e {
+  top: 79px;
+  right: 50%;
+  transform: translateX(78px);
+}
+.brow.f {
+  top: 93px;
+  right: 50%;
+  transform: translateX(132px) rotate(34deg);
+}
+/* ------眉毛结束------ */
+/* ------------ */
+.nose {
+  /* 小鼻子 */
+  border: 3px solid black;
+  width: 56px;
+  height: 90px;
+  background: rgb(253, 219, 33);
+  border-radius: 50%;
+  position: absolute;
+  left: 50%;
+  top: 200px;
+  transform: translateX(-28px);
+  z-index: 3;
+}
+
+.zh {
+  /* 阻挡小鼻子的正方形 */
+  width: 40px;
+  height: 30px;
+  top: 60px;
+  left: 4px;
+  background: rgb(253, 219, 33);
+  position: relative;
+}
+
+.mouth {
+  /* 小嘴 */
+  border: 3px solid #000;
+  width: 350px;
+  height: 120px;
+  left: 50%;
+  top: 190px;
+  position: absolute;
+  border-radius: 50% / 100px 100px 0 0;
+  transform: translateX(-50%) rotate(180deg);
+  border-color: #000 transparent transparent transparent;
+  z-index: 13;
+}
+
+.laugh {
+  /* 嘴角 */
+  border: 3px solid #000;
+  width: 20px;
+  height: 20px;
+  position: relative;
+  z-index: 13;
+}
+.laugh.left {
+  left: 90%;
+  top: 4px;
+  background: rgb(253, 219, 33);
+  transform: translateX(-16px) rotate(35deg);
+  border-top-color: rgb(253, 219, 33);
+  border-right-color: rgb(253, 219, 33);
+  border-bottom-color: rgb(253, 219, 33);
+}
+.laugh.right {
+  top: 22px;
+  background: rgb(253, 219, 33);
+  border-left-color: rgb(253, 219, 33);
+  border-right-color: rgb(253, 219, 33);
+  border-bottom-color: rgb(253, 219, 33);
+  transform: translateX(32px) rotate(55deg);
+}
+
+.tooth {
+  /* 大白牙 */
+  border: 3px solid #000;
+  width: 40px;
+  height: 40px;
+  background: rgb(255, 255, 255);
+  position: absolute;
+  z-index: 5;
+}
+.tooth.left {
+  left: 50%;
+  top: -40px;
+  transform: translateX(-50px) rotate(-6deg);
+}
+.tooth.right {
+  left: 50%;
+  top: -40px;
+  transform: translateX(10px) rotate(6deg);
+}
+/* ------脸颊开始------ */
+.eyelash {
+  border: 3px solid rgb(215, 60, 18);
+  width: 60px;
+  height: 60px;
+  position: absolute;
+  z-index: 5;
+  border-radius: 50%;
+  background: rgb(253, 219, 33);
+}
+.eyelash.left {
+  left: 50%;
+  top: 30px;
+  transform: translateX(92px);
+}
+.eyelash.right {
+  top: 30px;
+  transform: translateX(18px);
+}
+.zhe {
+  /* 脸颊遮挡 */
+  width: 45px;
+  height: 40px;
+  position: relative;
+  background: rgb(253, 219, 33);
+  z-index: 6;
+}
+.zhe.left {
+  left: 50%;
+  top: -10px;
+  transform: translateX(100px);
+}
+.zhe.right {
+  top: -50px;
+  transform: translateX(25px);
+}
+/* 雀斑 */
+.dian {
+  width: 8px;
+  height: 8px;
+  position: relative;
+  background: rgb(215, 60, 18);
+
+  z-index: 20;
+}
+.dian.a {
+  left: 100%;
+  top: -60px;
+  transform: translateX(-38px);
+  border-radius: 3px 3px 5px 3px;
+}
+.dian.b {
+  left: 100%;
+  top: -54px;
+  transform: translateX(-53px);
+  border-radius: 3px 3px 3px 4px;
+}
+.dian.c {
+  left: 100%;
+  top: -76px;
+  transform: translateX(-70px);
+  border-radius: 5px 3px 3px 3px;
+}
+.dian.d {
+  left: 50px;
+  top: -86px;
+  transform: translateX(12px);
+  border-radius: 3px 3px 5px 3px;
+}
+.dian.e {
+  left: 50px;
+  top: -94px;
+  transform: translateX(-25px);
+  border-radius: 3px 2px 5px 3px;
+}
+.dian.f {
+  left: 40px;
+  top: -86px;
+  transform: translateX(5px);
+  border-radius: 3px 3px 3px 4px;
+}
+/* ------脸颊结束------ */
+/* ------下吧开始------ */
+.chin {
+  border: 3px solid rgb(215, 60, 18);
+  border-radius: 50%;
+  position: absolute;
+}
+.chin.a {
+  width: 50px;
+  height: 50px;
+  right: 50%;
+  top: 329px;
+  transform: translateX(-5px);
+}
+.chin.b {
+  width: 60px;
+  height: 60px;
+  right: 50%;
+  top: 326px;
+  transform: translateX(40px);
+}
+.z {
+  background: rgb(253, 219, 33);
+  width: 110px;
+  height: 50px;
+  left: 50%;
+  position: absolute;
+  transform: translateX(-60px);
+  top: 320px;
+}
+/* ------下吧结束------ */
+.clothes {
+  border: 3px solid black;
+  width: 400px;
+  height: 110px;
+  left: 50%;
+  top: 460px;
+  background: rgb(255, 255, 255);
+  position: absolute;
+  transform: translateX(-211px);
+}
+.clothes::before {
+  content: "";
+  left: 50%;
+  top: 104px;
+  width: 100%;
+  height: 100%;
+  border: 3px solid black;
+  position: absolute;
+  transform: translateX(-200px);
+  background: rgb(187 120 49);
+}
+/* ------裤子开始------ */
+.chang {
+  background: #000;
+  width: 40px;
+  height: 20px;
+  right: 50%;
+  top: 610px;
+  position: absolute;
+  z-index: 1;
+}
+.chang.a {
+  transform: translateX(-170px);
+}
+.chang.b {
+  transform: translateX(-110px);
+}
+.chang.c {
+  transform: translateX(-50px);
+}
+.chang.d {
+  transform: translateX(10px);
+  z-index: 2;
+}
+.chang.e {
+  transform: translateX(70px);
+}
+.chang.f {
+  transform: translateX(130px);
+}
+.chang.g {
+  transform: translateX(188px);
+}
+
+/* ------裤子结束------ */
+.tie1 {
+  border: 30px solid transparent;
+  border-top: 50px solid black;
+  left: 50%;
+  width: 0px;
+  height: 0px;
+  position: relative;
+  transform: translateX(-25px);
+  z-index: 1;
+}
+.tie1::before {
+  content: "";
+  border: 20px solid transparent;
+  border-top: 45px solid red;
+  z-index: 2;
+  position: relative;
+  left: -19px;
+  top: -5px;
+}
+.tieZhe {
+  width: 19px;
+  height: 13px;
+  right: 50%;
+  top: 11px;
+  z-index: 3;
+  background: red;
+  transform: translateX(15px);
+  position: absolute;
+}
+.tieChang {
+  width: 22px;
+  height: 6px;
+  background: black;
+  right: 50%;
+  z-index: 4;
+  position: absolute;
+  top: 24px;
+  transform: translateX(16px);
+}
+.tie2 {
+  border: 40px solid transparent;
+  border-bottom: 50px solid black;
+  left: 50%;
+  top: -108px;
+  width: 0px;
+  height: 0px;
+  position: relative;
+  transform: translateX(-35px);
+  z-index: 1;
+}
+.tie2::before {
+  content: "";
+  z-index: 2;
+  border: 30px solid transparent;
+  border-bottom: 40px solid red;
+  left: -30px;
+  top: -12px;
+  position: relative;
+}
+.tie3 {
+  border: 40px solid transparent;
+  border-top: 70px solid black;
+  left: 50%;
+  top: -108px;
+  width: 0px;
+  height: 0px;
+  position: relative;
+  transform: translateX(-35px);
+  z-index: 1;
+}
+.tie3::before {
+  content: "";
+  border: 30px solid transparent;
+  border-top: 62px solid red;
+  z-index: 2;
+  position: relative;
+  top: -9px;
+  left: -30px;
+}
+.tieLeft {
+  border: 40px solid transparent;
+  border-top: 50px solid black;
+  left: 50%;
+  top: -280px;
+  width: 0px;
+  height: 0px;
+  position: relative;
+  transform: translateX(-138px);
+  z-index: 1;
+}
+.tieLeft::before {
+  content: "";
+  border: 31px solid transparent;
+  border-top: 42px solid rgb(255, 255, 255);
+  z-index: 2;
+  position: relative;
+  right: 31px;
+  top: -7px;
+}
+.tieRight {
+  border: 40px solid transparent;
+  border-top: 50px solid black;
+  left: 50%;
+  top: -370px;
+  width: 0px;
+  height: 0px;
+  position: relative;
+  transform: translateX(72px);
+}
+.tieRight::before {
+  content: "";
+  border: 31px solid transparent;
+  border-top: 42px solid rgb(255, 255, 255);
+  z-index: 2;
+  position: relative;
+  right: 31px;
+  top: -7px;
+}
